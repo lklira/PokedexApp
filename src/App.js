@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import styled from 'styled-components/native';
-import SearchInput from './src/components/searchInput';
+import SearchInput from './components/searchInput';
 
 
 
@@ -14,6 +14,7 @@ const StyledText = styled.Text`
   font-size: 32px;
   font-weight: 700;
   color: #444444;
+  margin-bottom: 32px;
 `
 const StyledSafeAreaView = styled.SafeAreaView`
   padding: 24px;
