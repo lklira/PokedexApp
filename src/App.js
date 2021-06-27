@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import styled from 'styled-components/native';
-import SearchInput from './components/searchInput';
+import {SearchInput, CategoryCard} from './components';
 
 
 
@@ -29,7 +29,7 @@ const App = () => {
         What Pokémon are you looking for?
       </StyledText>
       <SearchInput/>
-
+      <CategoryCard color="#ff0055"/>
     </StyledSafeAreaView>
   );
 };

@@ -30,7 +30,6 @@ export default SearchInput = () => {
       <StyledIconView>
         <Icon name="search" size={24} color="#888888" />
       </StyledIconView>
-      <Text>{searchValue}</Text>
     </View>
   );
 }
