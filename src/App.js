@@ -7,6 +7,7 @@ import {
 
 import styled from 'styled-components/native';
 import {SearchInput, CategoryCard} from './components';
+import { CATEGORIES } from './constants';
 
 
 
@@ -20,6 +21,12 @@ const StyledSafeAreaView = styled.SafeAreaView`
   padding: 24px;
   
 `
+const CategoriesContainer = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #aaa
+  height: 70%;
+`
 
 const App = () => {
 
@@ -29,7 +36,9 @@ const App = () => {
         What Pokémon are you looking for?
       </StyledText>
       <SearchInput/>
-      <CategoryCard color="#ff0055"/>
+      <CategoriesContainer>
+        {CATEGORIES.map(({name, color}) => <CategoryCard color={color} name={name}/> )}
+      </CategoriesContainer>
     </StyledSafeAreaView>
   );
 };

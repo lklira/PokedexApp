@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { View, Text, Dimensions } from 'react-native';
 import {BoxShadow} from 'react-native-shadow';
+import { PokeBall } from '../pokeBallStyle';
 
 const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
@@ -12,11 +13,13 @@ const Container = styled.View`
   border-radius: 18px;
   margin-top: 25px;
   padding-top: 40px;
+  overflow: hidden;
+  margin-right: 25px;
 `;
 
 
 
-export default CategoryCard = ({color}) => {
+export default CategoryCard = ({color, name}) => {
 
   const shadowOpt = {
     width: windowWidth*0.25,
@@ -32,7 +35,12 @@ export default CategoryCard = ({color}) => {
 
   return(
     <BoxShadow setting={shadowOpt}>
-      <Container color={color} />
+      <Container color={color}>
+        <Text>
+          {name}
+        </Text>
+        <PokeBall size={84} color={color}/>
+      </Container>
     </BoxShadow>
     
   );
