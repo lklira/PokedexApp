@@ -2,9 +2,10 @@ import React from 'react';
 
 import {
   SafeAreaView,
-  Text,
+  Text, FlatList
 } from 'react-native';
 
+import { PokeBall } from './components';
 import styled from 'styled-components/native';
 import {SearchInput, CategoryCard} from './components';
 import { CATEGORIES } from './constants';
@@ -24,6 +25,7 @@ const StyledSafeAreaView = styled.SafeAreaView`
 const CategoriesContainer = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 1;
   background-color: #aaa
   height: 70%;
 `
@@ -36,9 +38,18 @@ const App = () => {
         What Pokémon are you looking for?
       </StyledText>
       <SearchInput/>
-      <CategoriesContainer>
-        {CATEGORIES.map(({name, color}) => <CategoryCard color={color} name={name}/> )}
-      </CategoriesContainer>
+      <FlatList
+          data={CATEGORIES}
+          keyExtractor={item => item.name}
+          contentContainerStyle={{height:300}}
+          numColumns={2}
+          renderItem={({ item }) => {
+            return (
+              <CategoryCard color={item.color} name={item.name}/>
+            );
+          }}
+      />
+      <PokeBall size={200} bodyColor="#ccc"/>
     </StyledSafeAreaView>
   );
 };
