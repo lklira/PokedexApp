@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   SafeAreaView,
@@ -7,8 +7,8 @@ import {
 
 import { PokeBall } from './components';
 import styled from 'styled-components/native';
-import {SearchInput, CategoryCard} from './components';
-import { CATEGORIES } from './constants';
+import {SearchInput, CategoryList} from './components';
+
 
 
 
@@ -32,24 +32,16 @@ const CategoriesContainer = styled.View`
 
 const App = () => {
 
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <StyledSafeAreaView>
       <StyledText>
         What Pokémon are you looking for?
       </StyledText>
-      <SearchInput/>
-      <FlatList
-          data={CATEGORIES}
-          keyExtractor={item => item.name}
-          contentContainerStyle={{height:300}}
-          numColumns={2}
-          renderItem={({ item }) => {
-            return (
-              <CategoryCard color={item.color} name={item.name}/>
-            );
-          }}
-      />
-      <PokeBall size={200} bodyColor="#ccc"/>
+      <SearchInput searchValue={searchValue} setSearchValue={setSearchValue}/>
+      {searchValue ? null : <CategoryList/>}
+      <PokeBall size={260} bodyColor="#ccc" offset={125}/>
     </StyledSafeAreaView>
   );
 };

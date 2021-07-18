@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { Text, Dimensions } from 'react-native';
-import  PokeBall  from '../pokeBallStyle';
+import  PokeBall  from '../../pokeBallStyle';
 
 const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
@@ -29,7 +29,7 @@ export default CategoryCard = ({color, name}) => {
           <Name>
             {name}
           </Name>
-          <PokeBall size={84} lineColor={color}/>
+          <PokeBall size={84} lineColor={color} offset={6}/>
         </Container>
       
   );

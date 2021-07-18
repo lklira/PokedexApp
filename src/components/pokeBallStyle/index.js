@@ -1,19 +1,29 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
+
 const PokeBallContainer = styled.View`
   width: ${({size}) => size}px;
   height: ${({size}) => size}px;
-  background-color: ${({bodyColor}) => bodyColor};
-  opacity: ${({opacity}) => opacity};
   border-radius: ${({size}) => size}px;
   position: absolute;
-  top: ${({size}) => -size/14}px;
-  right: ${({size}) => -size/14}px;
+  top: ${({offset}) => -offset}px;
+  right: ${({offset}) => -offset}px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   elevation: -1;
   z-index: -1;
+  flex: 1;
+`;
+
+const PokeBallBody = styled.View`
+  width: 100%;
+  height: 100%;
+  background-color: ${({bodyColor}) => bodyColor};
+  opacity: ${({opacity}) => opacity};
+  border-radius: ${({size}) => size}px;
+  position: absolute;
 `;
 
 const PokeButton = styled.View`
@@ -21,48 +31,43 @@ const PokeButton = styled.View`
   border-radius: ${({size}) => size}px;
   height: ${({size}) => size/2}px;
   width: ${({size}) => size/2}px;
+  justify-content: center;
+`
+const PokeButtonContent = styled.View`
+  height: ${({size}) => size/12}px;
+  width: 10px;
   position: absolute;
-  right: ${({size}) => size/5.8}px;
-  top: ${({size}) => size/5.5}px;
-  elevation: -1;
-  z-index: -1;
+  left: ${({size}) => -size/12 - 5}px;
+  border-top-width: ${({size}) => size/12}px;
+  border-top-color: ${({lineColor}) => lineColor};
 `
 
 const LeftLine = styled.View`
-  width: 16%;
   height: ${({size}) => size/12}px;
   border-top-width: ${({size}) => size/12}px;
   border-top-color: ${({lineColor}) => lineColor};
-  position: absolute;
-  right: ${({size}) => size/1.53}px;
-  top: ${({size}) => size/2.55}px;
-  elevation: -1;
-  z-index: -1;
+  flex: 1;
 `
 const RightLine = styled.View`
-  width: 12%;
   height: ${({size}) => size/12}px;
   border-top-width: ${({size}) => size/12}px;
   border-top-color: ${({lineColor}) => lineColor};
-  position: absolute;
-  right: 0;
-  top: ${({size}) => size/2.55}px;
-  elevation: -1;
-  z-index: -1;
+  flex: 1;
 `
 
-const PokeBall = ({size, lineColor="#fff", bodyColor="#fff", opacity=0.3}) => {
+const PokeBall = ({size, lineColor="#fff", bodyColor="#fff", opacity=0.3, offset}) => {
   return (
-    <>
-      <PokeBallContainer size={size} bodyColor={bodyColor} opacity={opacity}/>
-      <PokeButton size={size} lineColor={lineColor}/>
-      <RightLine size={size} lineColor={lineColor}/>
+    <PokeBallContainer size={size} offset={offset}>
+      <PokeBallBody size={size} bodyColor={bodyColor} opacity={opacity}/>
       <LeftLine size={size} lineColor={lineColor}/>
-    </>
+
+      <PokeButton size={size} lineColor={lineColor}>
+        <PokeButtonContent lineColor={lineColor} size={size}/>
+      </PokeButton>
+      <RightLine size={size} lineColor={lineColor}/>
+    </PokeBallContainer>
   )
 }
-
-//11/07 deslocamento negativo, prop para o posicionamento das linhas, pokebutton e container das pokebolas
 
 export default PokeBall;
 

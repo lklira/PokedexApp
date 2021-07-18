@@ -1,5 +1,5 @@
 import SearchInput from './searchInput';
-import CategoryCard from './categoryCard';
+import CategoryList from './categoryList';
 import PokeBall from './pokeBallStyle';
 
-export {SearchInput, CategoryCard, PokeBall };
+export {SearchInput, CategoryList, PokeBall };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from 'styled-components/native';
 import { View, Text} from 'react-native';
@@ -20,9 +20,7 @@ const StyledIconView = styled.View`
   width: 24px;
 `
 
-export default SearchInput = () => {
-
-  const [searchValue, setSearchValue] = useState("");
+export default SearchInput = ({searchValue, setSearchValue}) => {
 
   return(
     <View>
