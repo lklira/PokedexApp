@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-
-import {
-  SafeAreaView,
-  Text, FlatList
-} from 'react-native';
-
+import React, { useState, useEffect } from 'react';
 import { PokeBall } from './components';
 import styled from 'styled-components/native';
 import {SearchInput, CategoryList} from './components';
-
-
+import PokemonService from "./services/PokemonService";
 
 
 const StyledText = styled.Text`
@@ -22,17 +15,12 @@ const StyledSafeAreaView = styled.SafeAreaView`
   padding: 24px;
   
 `
-const CategoriesContainer = styled.View`
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 1;
-  background-color: #aaa
-  height: 70%;
-`
 
 const App = () => {
 
   const [searchValue, setSearchValue] = useState("");
+
+  
 
   return (
     <StyledSafeAreaView>
