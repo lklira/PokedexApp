@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PokeBall } from './components';
 import styled from 'styled-components/native';
-import {SearchInput, CategoryList} from './components';
-import PokemonService from "./services/PokemonService";
+import {SearchInput, CategoryList, ResultList} from './components';
 
 
 const StyledText = styled.Text`
@@ -28,7 +27,7 @@ const App = () => {
         What Pokémon are you looking for?
       </StyledText>
       <SearchInput searchValue={searchValue} setSearchValue={setSearchValue}/>
-      {searchValue ? null : <CategoryList/>}
+      {searchValue ? <ResultList searchValue={searchValue}/> : <CategoryList/>}
       <PokeBall size={260} bodyColor="#ccc" offset={125}/>
     </StyledSafeAreaView>
   );
