@@ -1,23 +1,45 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {Text, FlatList} from 'react-native';
 import POKEDEX from '../../assets/pokedex.json';
 import levenshteinDistance from '../../utils/levenshteinDistance';
+import useDebounce from '../../hooks/useDebounce';
 
 // TODO: order list by similarity
 
 const ResultList = ({searchValue}) => {
   const [list, setList] = useState([]);
 
-  useEffect(() =>{
-    const results = [];
+  const handleSearchValueChange = useCallback(() => {
+    console.log("handleSearchValueChange");
+    let results = [];
     POKEDEX.forEach((pokemon) =>{
       const distance = levenshteinDistance(searchValue, pokemon);
-      if(distance/pokemon.length < 0.6){
-        results.push(pokemon);
+      const distanceRatio = distance/searchValue.length < 0.8;
+      if(distanceRatio){
+        results.push({
+          pokemon,
+          distanceRatio
+        });
       }
     });
+    results = results.sort((a, b) => {
+      if (a.distanceRatio < b.distanceRatio) {
+        return -1;
+      } else if (a.distanceRatio > b.distanceRatio) {
+        return 1;
+      }
+    
+      return 0;
+    }).map(result => result.pokemon);
+    
     setList(results);
-  }, [searchValue]);
+  }, [setList, searchValue]);
+
+  const debounced = useDebounce(handleSearchValueChange, 400);
+
+  useEffect(() =>{
+    debounced();
+  }, [debounced]);
 
   return (
     <FlatList
