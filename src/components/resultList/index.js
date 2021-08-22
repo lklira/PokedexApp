@@ -3,17 +3,18 @@ import {Text, FlatList} from 'react-native';
 import POKEDEX from '../../assets/pokedex.json';
 import levenshteinDistance from '../../utils/levenshteinDistance';
 import useDebounce from '../../hooks/useDebounce';
+import ResultCard from './resultCard';
+import typeColors from '../../assets/typeColors.json';
 
-// TODO: order list by similarity
+//TO DO: review de algorithm implementation 
 
 const ResultList = ({searchValue}) => {
   const [list, setList] = useState([]);
 
   const handleSearchValueChange = useCallback(() => {
-    console.log("handleSearchValueChange");
     let results = [];
     POKEDEX.forEach((pokemon) =>{
-      const distance = levenshteinDistance(searchValue, pokemon);
+      const distance = levenshteinDistance(searchValue, pokemon.name);
       const distanceRatio = distance/searchValue.length < 0.8;
       if(distanceRatio){
         results.push({
@@ -41,14 +42,16 @@ const ResultList = ({searchValue}) => {
     debounced();
   }, [debounced]);
 
+  console.log(list.length);
   return (
     <FlatList
       data={list}
-      keyExtractor={item => item}
-      contentContainerStyle={{height:300}}
-      renderItem={({ item }) => {
+      keyExtractor={item => item.name}
+     
+      renderItem={({ item: pokemon }) => {
+        const {color} = typeColors.find(({type}) => pokemon.types[0].type.name === type)   
         return (
-          <Text>{item}</Text>
+          <ResultCard color={color} name={pokemon.name}></ResultCard>
         );
       }}
     />

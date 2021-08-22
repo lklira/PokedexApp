@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PokeBall } from './components';
 import styled from 'styled-components/native';
 import {SearchInput, CategoryList, ResultList} from './components';
+import PokemonService from './services/PokemonService';
 
 
 const StyledText = styled.Text`
@@ -12,14 +13,16 @@ const StyledText = styled.Text`
 `
 const StyledSafeAreaView = styled.SafeAreaView`
   padding: 24px;
-  
+  flex: 1;
 `
 
 const App = () => {
 
   const [searchValue, setSearchValue] = useState("");
 
-  
+  useEffect(() => {
+    //PokemonService.getAll();
+  },[])
 
   return (
     <StyledSafeAreaView>
