@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {Dimensions} from 'react-native';
+import {Dimensions, View} from 'react-native';
 import PokeBall from '../../pokeBallStyle';
 import Type from './Type';
-
-//TO DO: align card size items, render 2 cards on each row
 
 const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
 
@@ -12,13 +10,13 @@ const Container = styled.View`
   background-color: ${props => props.color};
   border-radius: 18px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: ${() => windowHeight * 0.16}px;
-  width: ${() => windowWidth * 0.42}px;
-  margin-top: 16px;
-  margin-right: 12px;
+  width: 49%;
+  margin-top: 8px;
+  padding-horizontal: 12px;
   overflow: hidden;
-  padding-left: 20px;
 `;
 const Name = styled.Text`
   color: #fff;
@@ -32,7 +30,12 @@ const Info = styled.View`
 
 const Avatar = styled.Image`
   width: 80px;
+  height: 100%;
+`;
+
+const AvatarContainer = styled.View`
   height: 80px;
+  margin-left: 8px;
 `;
 
 export default ResultCard = ({color, pokemon}) => {
@@ -44,8 +47,10 @@ export default ResultCard = ({color, pokemon}) => {
           <Type key={type.name} type={type} />
         ))}
       </Info>
-      <Avatar source={{uri: pokemon.avatar}}></Avatar>
-      <PokeBall size={84} lineColor={color} offset={6} />
+      <AvatarContainer>
+        <Avatar source={{uri: pokemon.avatar}}></Avatar>
+        <PokeBall size={84} lineColor={color} offset={0} />
+      </AvatarContainer>
     </Container>
   );
 };

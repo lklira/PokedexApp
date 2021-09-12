@@ -20,15 +20,18 @@ const TypeText = styled.Text`
   top: 2px;
   left: 12px;
 `;
+const Container = styled.View`
+  flex-direction: row;
+`;
 
 const Type = ({type}) => {
   return (
-    <View>
+    <Container>
       <TypeText>{type.name}</TypeText>
       <TypeBackground>
         <TypeTextPlaceholder>{type.name}</TypeTextPlaceholder>
       </TypeBackground>
-    </View>
+    </Container>
   );
 };
 
