@@ -4,6 +4,8 @@ import {Dimensions, View} from 'react-native';
 import PokeBall from '../../pokeBallStyle';
 import Type from './Type';
 
+//To do: test how the flex-shrink and max-width behave on diferent devices
+
 const {width: windowWidth, height: windowHeight} = Dimensions.get('window');
 
 const Container = styled.View`
@@ -21,11 +23,16 @@ const Container = styled.View`
 const Name = styled.Text`
   color: #fff;
   font-weight: bold;
+  flex-wrap: wrap;
+`;
+
+const NameContainer = styled.View`
+  flex-direction: row;
 `;
 
 const Info = styled.View`
   justify-content: center;
-  height: 100%;
+  max-width: 80px;
 `;
 
 const Avatar = styled.Image`
@@ -42,7 +49,9 @@ export default ResultCard = ({color, pokemon}) => {
   return (
     <Container color={color}>
       <Info>
-        <Name>{pokemon.name}</Name>
+        <NameContainer>
+          <Name>{pokemon.name}</Name>
+        </NameContainer>
         {pokemon.types.map(type => (
           <Type key={type.name} type={type} />
         ))}

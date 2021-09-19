@@ -19,20 +19,28 @@ const ResultList = ({searchValue}) => {
 
   const handleSearchValueChange = useCallback(() => {
     let results = [];
-    const trimmedSearchValue = searchValue.trim().replace(/\s+/g, '-');
+    const trimmedSearchValue = searchValue.trim();
     POKEDEX.forEach(pokemon => {
       const distance = levenshteinDistance(trimmedSearchValue, pokemon.name);
       const distanceRatio = distance / trimmedSearchValue.length;
 
-      if (distanceRatio < 0.7) {
+      const pokemonStartsWith = pokemon.name.startsWith(trimmedSearchValue);
+      if (pokemonStartsWith || distanceRatio < 0.8) {
         results.push({
           pokemon,
           distanceRatio,
+          startsWith: pokemonStartsWith,
         });
       }
     });
     results = results
       .sort((a, b) => {
+        if (a.startsWith && !b.startsWith) {
+          return -1;
+        } else if (!a.startsWith && b.startsWith) {
+          return 1;
+        }
+
         if (a.distanceRatio < b.distanceRatio) {
           return -1;
         } else if (a.distanceRatio > b.distanceRatio) {

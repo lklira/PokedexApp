@@ -373,7 +373,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png"
   },
   {
-    "name": "nidoran-f",
+    "name": "nidoran f",
     "types": [
       {
         "slot": 1,
@@ -411,7 +411,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png"
   },
   {
-    "name": "nidoran-m",
+    "name": "nidoran m",
     "types": [
       {
         "slot": 1,
@@ -1596,7 +1596,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png"
   },
   {
-    "name": "mr-mime",
+    "name": "mr mime",
     "types": [
       {
         "slot": 1,
@@ -3309,7 +3309,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png"
   },
   {
-    "name": "ho-oh",
+    "name": "ho oh",
     "types": [
       {
         "slot": 1,
@@ -5145,7 +5145,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png"
   },
   {
-    "name": "deoxys-normal",
+    "name": "deoxys normal",
     "types": [
       {
         "slot": 1,
@@ -5502,7 +5502,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/412.png"
   },
   {
-    "name": "wormadam-plant",
+    "name": "wormadam plant",
     "types": [
       {
         "slot": 1,
@@ -5848,7 +5848,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/438.png"
   },
   {
-    "name": "mime-jr",
+    "name": "mime jr",
     "types": [
       {
         "slot": 1,
@@ -6338,7 +6338,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png"
   },
   {
-    "name": "porygon-z",
+    "name": "porygon z",
     "types": [
       {
         "slot": 1,
@@ -6516,7 +6516,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/486.png"
   },
   {
-    "name": "giratina-altered",
+    "name": "giratina altered",
     "types": [
       {
         "slot": 1,
@@ -6576,7 +6576,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png"
   },
   {
-    "name": "shaymin-land",
+    "name": "shaymin land",
     "types": [
       {
         "slot": 1,
@@ -7309,7 +7309,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/549.png"
   },
   {
-    "name": "basculin-red-striped",
+    "name": "basculin red striped",
     "types": [
       {
         "slot": 1,
@@ -7379,7 +7379,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/554.png"
   },
   {
-    "name": "darmanitan-standard",
+    "name": "darmanitan standard",
     "types": [
       {
         "slot": 1,
@@ -8545,7 +8545,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png"
   },
   {
-    "name": "tornadus-incarnate",
+    "name": "tornadus incarnate",
     "types": [
       {
         "slot": 1,
@@ -8556,7 +8556,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png"
   },
   {
-    "name": "thundurus-incarnate",
+    "name": "thundurus incarnate",
     "types": [
       {
         "slot": 1,
@@ -8604,7 +8604,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png"
   },
   {
-    "name": "landorus-incarnate",
+    "name": "landorus incarnate",
     "types": [
       {
         "slot": 1,
@@ -8636,7 +8636,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png"
   },
   {
-    "name": "keldeo-ordinary",
+    "name": "keldeo ordinary",
     "types": [
       {
         "slot": 1,
@@ -8652,7 +8652,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png"
   },
   {
-    "name": "meloetta-aria",
+    "name": "meloetta aria",
     "types": [
       {
         "slot": 1,
@@ -9047,7 +9047,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/677.png"
   },
   {
-    "name": "meowstic-male",
+    "name": "meowstic male",
     "types": [
       {
         "slot": 1,
@@ -9090,7 +9090,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/680.png"
   },
   {
-    "name": "aegislash-shield",
+    "name": "aegislash shield",
     "types": [
       {
         "slot": 1,
@@ -9504,7 +9504,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png"
   },
   {
-    "name": "pumpkaboo-average",
+    "name": "pumpkaboo average",
     "types": [
       {
         "slot": 1,
@@ -9520,7 +9520,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png"
   },
   {
-    "name": "gourgeist-average",
+    "name": "gourgeist average",
     "types": [
       {
         "slot": 1,
@@ -9945,7 +9945,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png"
   },
   {
-    "name": "oricorio-baile",
+    "name": "oricorio baile",
     "types": [
       {
         "slot": 1,
@@ -10004,7 +10004,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/744.png"
   },
   {
-    "name": "lycanroc-midday",
+    "name": "lycanroc midday",
     "types": [
       {
         "slot": 1,
@@ -10015,7 +10015,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
   },
   {
-    "name": "wishiwashi-solo",
+    "name": "wishiwashi solo",
     "types": [
       {
         "slot": 1,
@@ -10376,7 +10376,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/771.png"
   },
   {
-    "name": "type-null",
+    "name": "type null",
     "types": [
       {
         "slot": 1,
@@ -10398,7 +10398,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/773.png"
   },
   {
-    "name": "minior-red-meteor",
+    "name": "minior red meteor",
     "types": [
       {
         "slot": 1,
@@ -10457,7 +10457,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/777.png"
   },
   {
-    "name": "mimikyu-disguised",
+    "name": "mimikyu disguised",
     "types": [
       {
         "slot": 1,
@@ -10521,7 +10521,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/781.png"
   },
   {
-    "name": "jangmo-o",
+    "name": "jangmo o",
     "types": [
       {
         "slot": 1,
@@ -10532,7 +10532,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/782.png"
   },
   {
-    "name": "hakamo-o",
+    "name": "hakamo o",
     "types": [
       {
         "slot": 1,
@@ -10548,7 +10548,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/783.png"
   },
   {
-    "name": "kommo-o",
+    "name": "kommo o",
     "types": [
       {
         "slot": 1,
@@ -10564,7 +10564,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png"
   },
   {
-    "name": "tapu-koko",
+    "name": "tapu koko",
     "types": [
       {
         "slot": 1,
@@ -10580,7 +10580,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/785.png"
   },
   {
-    "name": "tapu-lele",
+    "name": "tapu lele",
     "types": [
       {
         "slot": 1,
@@ -10596,7 +10596,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/786.png"
   },
   {
-    "name": "tapu-bulu",
+    "name": "tapu bulu",
     "types": [
       {
         "slot": 1,
@@ -10612,7 +10612,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/787.png"
   },
   {
-    "name": "tapu-fini",
+    "name": "tapu fini",
     "types": [
       {
         "slot": 1,
@@ -11408,7 +11408,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/848.png"
   },
   {
-    "name": "toxtricity-amped",
+    "name": "toxtricity amped",
     "types": [
       {
         "slot": 1,
@@ -11635,7 +11635,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/865.png"
   },
   {
-    "name": "mr-rime",
+    "name": "mr rime",
     "types": [
       {
         "slot": 1,
@@ -11754,7 +11754,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/874.png"
   },
   {
-    "name": "eiscue-ice",
+    "name": "eiscue ice",
     "types": [
       {
         "slot": 1,
@@ -11765,7 +11765,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/875.png"
   },
   {
-    "name": "indeedee-male",
+    "name": "indeedee male",
     "types": [
       {
         "slot": 1,
@@ -11947,7 +11947,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png"
   },
   {
-    "name": "zacian-hero",
+    "name": "zacian hero",
     "types": [
       {
         "slot": 1,
@@ -11958,7 +11958,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png"
   },
   {
-    "name": "zamazenta-hero",
+    "name": "zamazenta hero",
     "types": [
       {
         "slot": 1,
@@ -11996,7 +11996,7 @@
     "avatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/891.png"
   },
   {
-    "name": "urshifu-single-strike",
+    "name": "urshifu single strike",
     "types": [
       {
         "slot": 1,
