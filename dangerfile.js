@@ -11,7 +11,17 @@ const checkComponentsCoverage = async () => {
       };
     });
   const structuredDiffs = await Promise.all(promiseDiffs); //^import React(,.+)? from 'react';$
-  console.log(JSON.stringify(structuredDiffs));
+  structuredDiffs.filter(({diff}) => {
+    let isReactComponent = false;
+    diff.chunks.forEach(chunk => {
+      chunk.changes.forEach(change => {
+        if (/^\+import React(,.+)? from 'react';$/.test(change.content)) {
+          isReactComponent = true;
+        }
+      });
+    });
+    return isReactComponent;
+  });
 };
 
 checkComponentsCoverage();
