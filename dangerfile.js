@@ -1,6 +1,6 @@
 import {danger} from 'danger';
 
-const checkComponentsCoverage = () => {
+const checkComponentsCoverage = async () => {
   const promiseDiffs = danger.git.created_files
     .filter(createdFile => /^src\/components\/.+\.js$/.test(createdFile))
     .map(async createdFile => {
@@ -11,4 +11,7 @@ const checkComponentsCoverage = () => {
       };
     });
   const structuredDiffs = await Promise.all(promiseDiffs); //^import React(,.+)? from 'react';$
+  console.log(JSON.stringify(structuredDiffs));
 };
+
+checkComponentsCoverage();

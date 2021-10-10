@@ -16,10 +16,9 @@ jobs:
       - name: install yarn
         run: npm install -g yarn
 
-      - name: yarn install, build, and test
+      - name: yarn install and test
         run: |
           yarn install  --frozen-lockfile
-          yarn build
           yarn test
 
       - name: Danger
