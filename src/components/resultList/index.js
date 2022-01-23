@@ -1,10 +1,11 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {StyleSheet, FlatList} from 'react-native';
-import POKEDEX from '../../assets/pokedex.json';
 import levenshteinDistance from '../../utils/levenshteinDistance';
 import useDebounce from '../../hooks/useDebounce';
 import ResultCard from './resultCard';
 import typeColors from '../../assets/typeColors.json';
+import PokemonService from '../../services/PokemonService';
+import ResultCardSkeleton from './resultCardSkeleton';
 
 //TO DO: review the algorithm implementation(draws between same distanceRatio(ex:typing "decidu" in search input))
 
@@ -15,12 +16,32 @@ const styles = StyleSheet.create({
 });
 
 const ResultList = ({searchValue}) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [list, setList] = useState([]);
+  const [pokemons, setPokemons] = useState([]);
 
-  const handleSearchValueChange = useCallback(() => {
+  useEffect(() => {
+    const request = async () => {
+      try {
+        const result = await PokemonService.list();
+        setPokemons(result);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    request();
+  }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [searchValue]);
+
+  const handleSearchValueChange = useCallback(async () => {
     let results = [];
     const trimmedSearchValue = searchValue.trim();
-    POKEDEX.forEach(pokemon => {
+
+    pokemons.forEach(pokemon => {
       const distance = levenshteinDistance(trimmedSearchValue, pokemon.name);
       const distanceRatio = distance / trimmedSearchValue.length;
 
@@ -33,6 +54,7 @@ const ResultList = ({searchValue}) => {
         });
       }
     });
+
     results = results
       .sort((a, b) => {
         if (a.startsWith && !b.startsWith) {
@@ -53,7 +75,8 @@ const ResultList = ({searchValue}) => {
       .map(result => result.pokemon);
 
     setList(results);
-  }, [setList, searchValue]);
+    setIsLoading(false);
+  }, [pokemons, setList, setIsLoading, searchValue]);
 
   const debounced = useDebounce(handleSearchValueChange, 400);
 
@@ -61,17 +84,29 @@ const ResultList = ({searchValue}) => {
     debounced();
   }, [debounced]);
 
+  if (isLoading) {
+    return (
+      <FlatList
+        data={[...Array(10).keys()]}
+        numColumns={2}
+        columnWrapperStyle={styles.columnWrapper}
+        keyExtractor={item => item}
+        renderItem={() => <ResultCardSkeleton />}
+      />
+    );
+  }
+
   return (
     <FlatList
       data={list}
       numColumns={2}
       columnWrapperStyle={styles.columnWrapper}
-      keyExtractor={item => item.name}
+      keyExtractor={item => item.id}
       renderItem={({item: pokemon}) => {
         const {color} = typeColors.find(
           ({type}) => pokemon.types[0].name === type,
         );
-        return <ResultCard color={color} pokemon={pokemon}></ResultCard>;
+        return <ResultCard color={color} pokemon={pokemon} />;
       }}
     />
   );

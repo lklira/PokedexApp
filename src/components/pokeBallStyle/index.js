@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-
 const PokeBallContainer = styled.View`
   width: ${({size}) => size}px;
   height: ${({size}) => size}px;
@@ -27,47 +26,52 @@ const PokeBallBody = styled.View`
 `;
 
 const PokeButton = styled.View`
-  border: ${({size}) => size/12}px solid ${({lineColor}) => lineColor};
+  border: ${({size}) => size / 12}px solid ${({lineColor}) => lineColor};
   border-radius: ${({size}) => size}px;
-  height: ${({size}) => size/2}px;
-  width: ${({size}) => size/2}px;
+  height: ${({size}) => size / 2}px;
+  width: ${({size}) => size / 2}px;
   justify-content: center;
-`
+`;
 const PokeButtonContent = styled.View`
-  height: ${({size}) => size/12}px;
+  height: ${({size}) => size / 12}px;
   width: 10px;
   position: absolute;
-  left: ${({size}) => -size/12 - 5}px;
-  border-top-width: ${({size}) => size/12}px;
+  left: ${({size}) => -size / 12 - 5}px;
+  border-top-width: ${({size}) => size / 12}px;
   border-top-color: ${({lineColor}) => lineColor};
-`
+`;
 
 const LeftLine = styled.View`
-  height: ${({size}) => size/12}px;
-  border-top-width: ${({size}) => size/12}px;
+  height: ${({size}) => size / 12}px;
+  border-top-width: ${({size}) => size / 12}px;
   border-top-color: ${({lineColor}) => lineColor};
   flex: 1;
-`
+`;
 const RightLine = styled.View`
-  height: ${({size}) => size/12}px;
-  border-top-width: ${({size}) => size/12}px;
+  height: ${({size}) => size / 12}px;
+  border-top-width: ${({size}) => size / 12}px;
   border-top-color: ${({lineColor}) => lineColor};
   flex: 1;
-`
+`;
 
-const PokeBall = ({size, lineColor="#fff", bodyColor="#fff", opacity=0.3, offset}) => {
+const PokeBall = ({
+  size,
+  lineColor = '#fff',
+  bodyColor = '#fff',
+  opacity = 0.3,
+  offset,
+}) => {
   return (
     <PokeBallContainer size={size} offset={offset}>
-      <PokeBallBody size={size} bodyColor={bodyColor} opacity={opacity}/>
-      <LeftLine size={size} lineColor={lineColor}/>
+      <PokeBallBody size={size} bodyColor={bodyColor} opacity={opacity} />
+      <LeftLine size={size} lineColor={lineColor} />
 
       <PokeButton size={size} lineColor={lineColor}>
-        <PokeButtonContent lineColor={lineColor} size={size}/>
+        <PokeButtonContent lineColor={lineColor} size={size} />
       </PokeButton>
-      <RightLine size={size} lineColor={lineColor}/>
+      <RightLine size={size} lineColor={lineColor} />
     </PokeBallContainer>
-  )
-}
+  );
+};
 
 export default PokeBall;
-

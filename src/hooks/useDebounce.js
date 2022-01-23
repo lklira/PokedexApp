@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react';
+import {useEffect, useMemo, useRef} from 'react';
 
 /// Memo: Return to understand better useDebounce
 /// requirements: useEffect, useMemo, useCallback, useRef
@@ -9,7 +9,7 @@ function callFn(fn, args) {
   }
 }
 function useDebounce(fn, duration) {
-  const timeoutRef = useRef(null); 
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     return () => clearTimeout(timeoutRef.current);
