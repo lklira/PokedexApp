@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {View} from 'react-native';
 
 const TypeBackground = styled.View`
   padding-vertical: 2px;

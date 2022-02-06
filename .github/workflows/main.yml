@@ -21,7 +21,10 @@ jobs:
           yarn install  --frozen-lockfile
           yarn test
 
-      - name: Danger
+      - name: Set danger env
+        run: echo "DANGER_GITHUB_API_TOKEN=$(echo FIRST_HALF + SECOND_HALF)" >> $GITHUB_ENV
+
+      - name: Run Danger
         run: yarn danger ci
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ env.DANGER_GITHUB_API_TOKEN }}

@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ResultCardSkeleton renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#e8e8e8",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "height": 213.44,
+        "justifyContent": "space-between",
+        "marginTop": 8,
+        "overflow": "hidden",
+        "paddingHorizontal": 12,
+        "width": "49%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "center",
+          "width": 65,
+        },
+      ]
+    }
+  >
+    <View
+      opacity={0.3}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "height": 16,
+          "marginBottom": 4,
+          "opacity": 0.3,
+          "paddingHorizontal": 12,
+          "paddingVertical": 2,
+        }
+      }
+    />
+    <View
+      opacity={0.3}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "height": 16,
+          "marginBottom": 4,
+          "opacity": 0.3,
+          "paddingHorizontal": 12,
+          "paddingVertical": 2,
+        }
+      }
+    />
+    <View
+      opacity={0.3}
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "height": 16,
+          "marginBottom": 4,
+          "opacity": 0.3,
+          "paddingHorizontal": 12,
+          "paddingVertical": 2,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 80,
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    <View
+      offset={0}
+      size={84}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 84,
+            "elevation": -1,
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "height": 84,
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 84,
+            "zIndex": -1,
+          },
+        ]
+      }
+    >
+      <View
+        bodyColor="#fff"
+        opacity={0.3}
+        size={84}
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 84,
+            "height": "100%",
+            "opacity": 0.3,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        lineColor="#e8e8e8"
+        size={84}
+        style={
+          Array [
+            Object {
+              "borderTopColor": "#e8e8e8",
+              "borderTopWidth": 7,
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "height": 7,
+            },
+          ]
+        }
+      />
+      <View
+        lineColor="#e8e8e8"
+        size={84}
+        style={
+          Array [
+            Object {
+              "borderColor": "#e8e8e8",
+              "borderRadius": 84,
+              "borderStyle": "solid",
+              "borderWidth": 7,
+              "height": 42,
+              "justifyContent": "center",
+              "width": 42,
+            },
+          ]
+        }
+      >
+        <View
+          lineColor="#e8e8e8"
+          size={84}
+          style={
+            Array [
+              Object {
+                "borderTopColor": "#e8e8e8",
+                "borderTopWidth": 7,
+                "height": 7,
+                "left": -12,
+                "position": "absolute",
+                "width": 10,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        lineColor="#e8e8e8"
+        size={84}
+        style={
+          Array [
+            Object {
+              "borderTopColor": "#e8e8e8",
+              "borderTopWidth": 7,
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "height": 7,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

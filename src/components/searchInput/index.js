@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from 'styled-components/native';
-import {View, Text} from 'react-native';
 
 const StyledTextInput = styled.TextInput`
   background-color: #e8e8e8;
@@ -24,7 +23,7 @@ const Container = styled.View`
   margin-bottom: 8px;
 `;
 
-export default SearchInput = ({searchValue, setSearchValue}) => {
+const SearchInput = ({searchValue, setSearchValue}) => {
   return (
     <Container>
       <StyledTextInput value={searchValue} onChangeText={setSearchValue} />
@@ -34,3 +33,5 @@ export default SearchInput = ({searchValue, setSearchValue}) => {
     </Container>
   );
 };
+
+export default SearchInput;

@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://pokeapi.co/api/v2/",
-  headers: {"content-type": "application/json"}
+  baseURL: 'http://localhost:3333',
+  headers: {'content-type': 'application/json'},
 });
 
 export default api;
