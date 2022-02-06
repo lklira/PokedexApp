@@ -1,43 +1,24 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import {Animated} from 'react-native';
+import styled from 'styled-components/native';
+import useOpacityAnimation from '../../../hooks/useOpacityAnimation';
 
-const InfoSkeleton = () => {
-  const fadeAnim = useRef(new Animated.Value(0.3)).current;
+const InfoSkeleton = props => {
+  const opacityAnimation = useOpacityAnimation();
 
-  useEffect(() => {
-    Animated.loop(
-      Animated.sequence([
-        Animated.timing(fadeAnim, {
-          toValue: 0.8,
-          duration: 700,
-          useNativeDriver: true,
-        }),
-        Animated.timing(fadeAnim, {
-          toValue: 0.3,
-          duration: 700,
-          useNativeDriver: true,
-        }),
-      ]),
-    ).start();
-  }, [fadeAnim]);
+  const StyledView = styled.View`
+    padding-vertical: 2px;
+    padding-horizontal: 12px;
+    border-radius: 16px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    height: 16px;
+    opacity: ${styleProps => styleProps.opacity._value};
+  `;
 
   return (
-    <Animated.View
-      style={{
-        ...styles,
-        opacity: fadeAnim,
-      }}
-    />
+    <StyledView as={Animated.View} opacity={opacityAnimation} {...props} />
   );
-};
-
-const styles = {
-  paddingVertical: 2,
-  paddingHorizontal: 12,
-  borderRadius: 16,
-  marginBottom: 4,
-  backgroundColor: '#fff',
-  height: 16,
 };
 
 export default InfoSkeleton;

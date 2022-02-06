@@ -1,5 +1,7 @@
 import React from 'react';
+import {Animated} from 'react-native';
 import styled from 'styled-components/native';
+import useOpacityAnimation from '../../hooks/useOpacityAnimation';
 
 const PokeBallContainer = styled.View`
   width: ${({size}) => size}px;
@@ -20,7 +22,7 @@ const PokeBallBody = styled.View`
   width: 100%;
   height: 100%;
   background-color: ${({bodyColor}) => bodyColor};
-  opacity: ${({opacity}) => opacity};
+  opacity: ${({opacity}) => opacity._value};
   border-radius: ${({size}) => size}px;
   position: absolute;
 `;
@@ -60,10 +62,19 @@ const PokeBall = ({
   bodyColor = '#fff',
   opacity = 0.3,
   offset,
+  animated = false,
+  ...props
 }) => {
+  const opacityAnimation = useOpacityAnimation();
+
   return (
-    <PokeBallContainer size={size} offset={offset}>
-      <PokeBallBody size={size} bodyColor={bodyColor} opacity={opacity} />
+    <PokeBallContainer size={size} offset={offset} {...props}>
+      <PokeBallBody
+        as={Animated.View}
+        size={size}
+        bodyColor={bodyColor}
+        opacity={animated ? opacityAnimation : {_value: opacity}}
+      />
       <LeftLine size={size} lineColor={lineColor} />
 
       <PokeButton size={size} lineColor={lineColor}>

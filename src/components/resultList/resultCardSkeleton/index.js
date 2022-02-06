@@ -38,7 +38,7 @@ const ResultCardSkeleton = () => {
         <InfoSkeleton />
       </Info>
       <BallContainer>
-        <PokeBall size={84} lineColor="#e8e8e8" offset={0} />
+        <PokeBall size={84} lineColor="#e8e8e8" offset={0} animated />
       </BallContainer>
     </Container>
   );

@@ -78,7 +78,7 @@ const ResultList = ({searchValue}) => {
     setIsLoading(false);
   }, [pokemons, setList, setIsLoading, searchValue]);
 
-  const debounced = useDebounce(handleSearchValueChange, 400);
+  const debounced = useDebounce(handleSearchValueChange, 500);
 
   useEffect(() => {
     debounced();

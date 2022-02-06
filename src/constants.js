@@ -2,31 +2,31 @@ export const CATEGORIES = [
   {
     name: 'PokeDex',
     color: '#48d0b0',
-    route: ''
+    route: '',
   },
   {
     name: 'Moves',
     color: '#f7786b',
-    route: ''
+    route: '',
   },
   {
     name: 'Abilities',
     color: '#58aaf6',
-    route: ''
+    route: '',
   },
   {
     name: 'Items',
     color: '#ffce4b',
-    route: ''
+    route: '',
   },
   {
     name: 'Locations',
     color: '#7c538c',
-    route: ''
+    route: '',
   },
   {
     name: 'Type Charts',
     color: '#b1736c',
-    route: ''
-  }
-]
+    route: '',
+  },
+];
